@@ -1,4 +1,4 @@
-package com.learn;
+package com.learn.api;
 
 /**
  * Created by shehan on 3/27/16.
@@ -7,6 +7,9 @@ package com.learn;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.Length;
 
+/**
+ * Immutable Representation Class for the API
+ */
 public class Saying {
     private long id;
 
@@ -30,5 +33,13 @@ public class Saying {
     @JsonProperty
     public String getContent() {
         return content;
+    }
+
+    @Override
+    public String toString() {
+        return "Saying{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                '}';
     }
 }

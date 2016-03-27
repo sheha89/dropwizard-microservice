@@ -1,4 +1,4 @@
-package com.learn;
+package com.learn.health;
 
 /**
  * Created by shehan on 3/27/16.

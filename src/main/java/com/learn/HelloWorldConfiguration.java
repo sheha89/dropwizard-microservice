@@ -8,6 +8,12 @@ import org.hibernate.validator.constraints.NotEmpty;
  * Created by shehan on 3/26/16.
  */
 
+
+/**
+ * Configuration class  specifies environment-specific parameters.
+ * This class will be deserialized from the YAML file using jackson.
+ */
+
 public class HelloWorldConfiguration extends Configuration {
     @NotEmpty
     private String template;
@@ -21,13 +27,13 @@ public class HelloWorldConfiguration extends Configuration {
     }
 
     @JsonProperty
-    public void setTemplate(String template) {
-        this.template = template;
+    public String getDefaultName() {
+        return defaultName;
     }
 
     @JsonProperty
-    public String getDefaultName() {
-        return defaultName;
+    public void setTemplate(String template) {
+        this.template = template;
     }
 
     @JsonProperty

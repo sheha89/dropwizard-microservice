@@ -4,10 +4,16 @@ package com.learn;
  * Created by shehan on 3/27/16.
  */
 
+import com.learn.health.TemplateHealthCheck;
+import com.learn.resources.HelloWorldResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
+
+/**
+ * This class forms the core of the Dropwizard application.
+ */
 public class HelloWorldApplication extends Application<HelloWorldConfiguration> {
     public static void main(String[] args) throws Exception {
         new HelloWorldApplication().run(args);
